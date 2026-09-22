@@ -1,0 +1,88 @@
+/* for initialinzing all styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;     
+}
+
+/* styling for the main screen */
+.mainScreen {
+    position: relative;
+  padding: 30px 50px 0px 50px;
+  width: auto;
+  height: 100vh;
+
+  background-color: red;
+  overflow-x: hidden;
+  overflow-y: hidden; 
+}
+
+/* Styling for the status bar */
+.statusBar {
+  width: auto;
+  height: 10vh;
+  background-color: blue;
+  border-radius: 30px 30px 0px 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.statusBar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+.statusBar ul li {
+    list-style: none;
+    color: white;
+    font-weight: 900;
+}
+/* Styling fo rhe main window */
+.mainWindow {
+  width: auto;
+  height: 50vh;
+  background-color: black;
+  color: pink;
+  /* padding: 30px 50px 50px 50px; */
+}
+.mainwindow ul{
+    color: blue;
+    /* display: inline-block; */
+    /* flex-wrap: wrap-reverse; */
+    /* flex-direction: row; */
+    /* background-color: green; */
+}
+.mainWindow ul li{
+    list-style: none;
+    color: white;
+    font-weight: 900;
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+    border: 2px solid yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.icons{
+    padding: 10px 0px 10px 10px;
+    width: auto;
+    height: 60vh;
+    background-color: rgb(247, 248, 244);
+    display: flex;
+    justify-content: space-start;  
+    align-items: flex-start; 
+    
+}
+#NetworkWindow{
+    position: absolute;
+    color: blue;
+    background-color: rgb(242, 0, 255);
+    width: 100vw;
+    height: 60vh;
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas OS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="mainScreen">
+      <div class="statusBar">
+        <ul>
+          <li>ATLAS OS</li>
+          <li id="time">Time</li>
+        </ul>
+        
+      </div>
+        <div class="mainWindow">
+          <div class="icons">
+            <ul>
+              <li>Network</li>
+              <li>Admin</li>
+
+              <li>Find Nemo</li>
+            </ul>
+          </div>
+          <div id="NetworkWindow" class="window" style="display: none;">
+            <ul>
+              <li>
+                <button
+                  onclick="
+                    closeWindow(document.getElementById('NetworkWindow'))
+                  "
+                >
+                  Minimize
+                </button> 
+              </li>
+            </ul>
+            This device is not connected to any network.
+          </div>
+      </div>
+    </div>
+  </body>
+  <script src="secondScript.js"></script>
+</html>
