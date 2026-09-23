@@ -85,4 +85,15 @@ body{
     background-color: rgb(242, 0, 255);
     width: 100vw;
     height: 60vh;
+
 }
+.window{
+    position: absolute;
+    color: cyan;
+    background-color: silver;
+    top: 0px;
+    width: contain;
+    height: contain;
+}
+
+/* Commenting in a single line can cause theh hackatime to update, I'm not trying to exploit it but just checking if someone out there will read this peice of code out by themselfs or the dead interent theory is true. about 60% of the interent is just AI ,bots and crawleres. */

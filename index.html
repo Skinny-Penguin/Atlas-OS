@@ -13,31 +13,65 @@
           <li>ATLAS OS</li>
           <li id="time">Time</li>
         </ul>
-        
       </div>
-        <div class="mainWindow">
-          <div class="icons">
-            <ul>
-              <li>Network</li>
-              <li>Admin</li>
+      <div class="mainWindow">
+        <div class="icons">
+          <ul>
+            <li id="network_Clickable">Network</li>
+            <li id="admin_Clickable">Admin</li>
 
-              <li>Find Nemo</li>
-            </ul>
-          </div>
-          <div id="NetworkWindow" class="window" style="display: none;">
-            <ul>
-              <li>
-                <button
-                  onclick="
-                    closeWindow(document.getElementById('NetworkWindow'))
-                  "
-                >
-                  Minimize
-                </button> 
-              </li>
-            </ul>
-            This device is not connected to any network.
-          </div>
+            <li id="findNemo_Clickable">Find Nemo</li>
+          </ul>
+        </div>
+        <!-- This is the network application.  -->
+        <!-- This below code is for the applicaiton that will be operational in the webOS -->
+        <!-- This doesn't do anything for now but it is a statring point for a placeholer. -->
+        <div id="NetworkWindow" class="window" style="display: none">
+          <nav>
+          <ul>
+            <li>
+              <button
+              onclick="closeWindow(document.getElementById('NetworkWindow'))"
+              >
+              Minimize
+            </button>
+          </li>
+        </ul>
+
+        </nav>
+          This device is not connected to any network.
+        </div>
+        <div id="AdminWindow" class="window" style="display: none">
+          <nav>
+          <ul>
+            <li>
+              <button
+              onclick="closeWindow(document.getElementById('AdminWindow'))"
+              >
+              Minimize
+            </button>
+          </li>
+        </ul>
+
+        </nav>
+          This is admin window application. And this is runnning 
+        </div>
+        <div id="FindNemoWindow" class="window" style="display: none">
+          <nav>
+          <ul>
+            <li>
+              <button
+              onclick="closeWindow(document.getElementById('FindNemoWindow'))"
+              >
+              Minimize
+            </button>
+          </li>
+        </ul>
+
+        </nav>
+     This is Findiing Nemo application runnig
+        </div>
+
       </div>
     </div>
   </body>

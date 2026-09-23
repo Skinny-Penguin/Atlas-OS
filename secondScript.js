@@ -12,6 +12,8 @@ setInterval(updateTime, 1000);
 
 // Make the DIV element draggable:
 dragElement(document.getElementById("NetworkWindow"));
+dragElement(document.getElementById("AdminWindow"));
+dragElement(document.getElementById("FindNemoWindow"));
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
@@ -76,8 +78,29 @@ function closeWindow(element) {
   element.style.display = "none"
 }
 
-// for opening a window
+// for opening network applicaiton window
+
+var network_app= document.getElementById("network_Clickable");
+network_app.addEventListener("click", () => {
+  openWindow(document.getElementById("NetworkWindow"));
+});
+
+// For opening admin application window
+var admin_app= document.getElementById("admin_Clickable");
+admin_app.addEventListener("click", () => {
+  openWindow(document.getElementById("AdminWindow"));
+});
+
+// For opening Find Nemo application window
+var findNemo_app= document.getElementById("findNemo_Clickable");
+findNemo_app.addEventListener("click", () => {
+  openWindow(document.getElementById("FindNemoWindow"));
+});
+
+// Function that opens a window that it is passed.
 function openWindow(element) {
-  element.style.display = "flex"
+  element.style.display = "block";
   console.log("Window opened: " + element.id);
 }
+
+openWindow(app);
