@@ -78,12 +78,21 @@ function closeWindow(element) {
   element.style.display = "none"
 }
 
+var highestZIndex = 1; // Variable to keep track of the highest z-index
+// function for making the active window on top of other windows.
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", () =>
+    handleWindowTap(element)
+  )
+}
+
 // for opening network applicaiton window
 
 var network_app= document.getElementById("network_Clickable");
 network_app.addEventListener("click", () => {
   openWindow(document.getElementById("NetworkWindow"));
 });
+
 
 // For opening admin application window
 var admin_app= document.getElementById("admin_Clickable");
@@ -95,12 +104,18 @@ admin_app.addEventListener("click", () => {
 var findNemo_app= document.getElementById("findNemo_Clickable");
 findNemo_app.addEventListener("click", () => {
   openWindow(document.getElementById("FindNemoWindow"));
-});
+}); 
+
 
 // Function that opens a window that it is passed.
 function openWindow(element) {
   element.style.display = "block";
   console.log("Window opened: " + element.id);
+  element.style.zIndex = ++highestZIndex; // Bring the window to the front by increasing its z-index
+  element.addEventListener("mousedown", () => {
+    element.style.zIndex = ++highestZIndex; // Bring the window to the front when clicked
+  }
+  ); // Add event listener to bring the window to the front when clicked
 }
 
 openWindow(app);
